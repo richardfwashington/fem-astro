@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/default.astro';
+import { Image } from 'astro:assets';
 import heroImg from '../images/sandwich-hero.jpg';
+
+console.log(heroImg)
 ---
 
 <Layout>
@@ -10,12 +13,11 @@ import heroImg from '../images/sandwich-hero.jpg';
 			<p class="lede">We're the best thing since sliced bread.</p>
 			<a href="/shop" class="big-link">Shop Sandwich Kits</a>
 		</div>
-		<img
+		<Image
 			src={heroImg}
-			alt="A sandwich on a plate"
-			class="hero-image"
-			loading="eager"
+			class="hero-image"	
 			decoding="async"
+			alt="A description of my image."			
 		/>
 	</section>
 </Layout>

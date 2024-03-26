@@ -1,6 +1,13 @@
 ---
 layout: ../layouts/page.astro
+title: 'banana'
 ---
+
+import ShopItems from '../components/shop-items.astro';
+export const title = 'My first MDX post';
+export function banana() {
+	return 'banana';
+}
 
 # About sndwch
 
@@ -13,3 +20,7 @@ Forget the labels. You don’t need to stand alone. Explore a new world of joyfu
 Because when you’re here, just about everything can be a sandwich.
 
 Join us. [Shop now &rarr;](/shop)
+
+<ShopItems />
+{title}
+{banana()}
