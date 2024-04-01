@@ -16,4 +16,5 @@ export default defineConfig({
 		}),
 		mdx(),
 	],
+	site: 'https://astro-frontend-masters.netlify.app',
 });
