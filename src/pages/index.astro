@@ -2,6 +2,7 @@
 import Layout from '../layouts/default.astro';
 import { Image } from 'astro:assets';
 import heroImg from '../images/sandwich-hero.jpg';
+import newsletterImg from '../images/newsletter.jpg';
 import ShopItems from '../components/shop-items.astro';
 console.log(heroImg)
 ---
@@ -25,6 +26,28 @@ console.log(heroImg)
 		<ShopItems count={3} addToCart={false} />
 		<p class="shop-link"><a href="/shop">Shop All Sandwiches &rarr;</a></p>
 	</section>
+
+	<section class="block newsletter">
+		<h3>Get the latest sandwich news</h3>
+		<Image
+			src={newsletterImg}
+			alt="A bag with the word 'sndwch' on it"
+		/>
+		<div class="copy">
+			<h3>Prefer your sandwiches on the go?</h3>
+			<p>Get the sndwch newsletter to hear what else qualifies as a sandwich first!</p>
+			<form method="post" action="/newsletter" class="newsletter-form">
+				<label for="name">Name</label>
+				<input type="text" id="name" name="name" required />
+			
+				<label for="email">Email</label>
+				<input type="email" id="email" name="email" required />
+			
+				<button type="submit" class="big-link">Subscribe</button>
+			</form>
+		</div>
+	</section>
+		
 </Layout>
 
 <style>
