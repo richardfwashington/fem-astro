@@ -2,11 +2,32 @@
 import Layout from '../layouts/page.astro';
 
 export const prerender = false;
+
+let message;
+
+if(Astro.request.method === 'POST'){
+    try {
+        const data = await Astro.request.formData();
+        const name = data.get('name');
+        const email = data.get('email');
+
+        // TODO: actually use this date somewhere
+        message = `Subscribed as "${name}" with email "${email}"`;
+    } catch(error) {
+        console.log(error);
+    }
+}
 ---
 
 <Layout>
   <h1 class="heading">Get the sndch newsletter</h1>
-    <form method="post" class="newsletter visible">
+
+  <div class:list={{ success: true, visible: message }}>
+    {message}
+    <a href="/newsletter">Start over</a>
+  </div>
+
+    <form method="post" class:list={{ newsletter: true, visible: !message }}>
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required />
     
