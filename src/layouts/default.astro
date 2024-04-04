@@ -1,4 +1,6 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
+
 const navItems = [
 	{
 		path: '/shop',
@@ -29,6 +31,7 @@ const navItems = [
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Make great sandwiches at home with sndwch</title>
+		<ViewTransitions />
 	</head>
 	<body>
 		<header>
@@ -45,8 +48,8 @@ const navItems = [
 				}
 			</nav>
 		</header>
-
-		<slot />
+		<div transition:animate="fade"><slot/></div>
+		
 
 		<footer>
 			<p>
