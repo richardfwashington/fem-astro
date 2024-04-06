@@ -15,7 +15,6 @@ export default defineConfig({
   }), react({
     include: ['**/react/*']
   }), mdx()],
-  site: 'https://richardfwashington/github.io',
-  base: '/fem-astro',
+  site: 'https://fem-astro-tau.vercel.app',
   adapter: vercel()
 });
