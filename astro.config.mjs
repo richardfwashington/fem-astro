@@ -16,5 +16,6 @@ export default defineConfig({
     include: ['**/react/*']
   }), mdx()],
   site: 'https://fem-astro-tau.vercel.app',
-  adapter: vercel()
+  adapter: vercel(),
+  prefetch: true,
 });
