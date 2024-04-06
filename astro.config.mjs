@@ -13,8 +13,9 @@ export default defineConfig({
   }), react({
     include: ['**/react/*']
   }), mdx()],
-  site: 'https://astro-frontend-masters.netlify.app',
+  site: 'https://richardfwashington/github.io',
+  base: '/fem-astro',
   adapter: node({
     mode: "standalone"
-  })
+  }),
 });
