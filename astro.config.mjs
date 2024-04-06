@@ -5,6 +5,8 @@ import solid from '@astrojs/solid-js';
 import mdx from '@astrojs/mdx';
 import node from "@astrojs/node";
 
+import vercel from "@astrojs/vercel/serverless";
+
 // https://astro.build/config
 export default defineConfig({
   output: 'hybrid',
@@ -15,7 +17,5 @@ export default defineConfig({
   }), mdx()],
   site: 'https://richardfwashington/github.io',
   base: '/fem-astro',
-  adapter: node({
-    mode: "standalone"
-  }),
+  adapter: vercel()
 });
