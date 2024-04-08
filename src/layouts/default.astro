@@ -1,5 +1,6 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
+import  SpeedInsights  from "@vercel/speed-insights/astro"
 
 const navItems = [
 	{
@@ -32,6 +33,7 @@ const navItems = [
 		<meta name="generator" content={Astro.generator} />
 		<title>Make great sandwiches at home with sndwch</title>
 		<ViewTransitions />
+		<SpeedInsights/>
 	</head>
 	<body>
 		<header>
