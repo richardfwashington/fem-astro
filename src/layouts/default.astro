@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
 import  SpeedInsights  from "@vercel/speed-insights/astro"
+import { AstroFont } from "astro-font";
 
 const navItems = [
 	{
@@ -21,13 +22,21 @@ const navItems = [
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link
-			href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@700&display=swap"
-			rel="stylesheet"
-		/>
+		
+		<AstroFont
+		config={[
+		  {
+			src: [],
+			name: "DynaPuff",
+			// Google Fonts URL
+			googleFontsURL: 'https://fonts.googleapis.com/css2?family=DynaPuff:ital,wght@0,400;0,600;1,400;1,700&display=swap',
+			preload: true,
+			display: "swap",
+			selector: "body",
+			fallback: "sans-serif",
+		  },
+		]}	  />	
+
 
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
@@ -91,6 +100,9 @@ const navItems = [
 
 	body {
 		margin: 0;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+			Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+			'Segoe UI Symbol';
 	}
 
 	:is(h1, h2, h3, h4, h5, h6) {

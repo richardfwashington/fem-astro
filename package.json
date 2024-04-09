@@ -20,6 +20,7 @@
 		"@nanostores/solid": "^0.4.2",
 		"@vercel/speed-insights": "^1.0.10",
 		"astro": "^4.5.4",
+		"astro-font": "^0.0.80",
 		"markdown-it": "^14.1.0",
 		"nanostores": "^0.10.0",
 		"react": "^18.2.0",
