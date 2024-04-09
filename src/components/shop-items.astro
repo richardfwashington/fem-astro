@@ -29,8 +29,8 @@ const { count = Infinity, addToCart = true } = Astro.props;
 {
     shopItems.slice(0, count).map((item) => (
         <div class="item">
-            <Image src={item.image.src} alt={item.image.alt}    width="375"
-  height="375"/>
+            <Image src={item.image.src} alt={item.image.alt}    width="250"
+  height="250"/>
             <h2>{item.title}</h2>
             <p>{item.description}</p>
             <p class="price">{formatCurrency(item.price)}</p>
@@ -51,6 +51,7 @@ const { count = Infinity, addToCart = true } = Astro.props;
 
 .item {
 	width: 250px;
+
 }
 
 .item img {
