@@ -1,5 +1,6 @@
 ---
 import { AddToCart } from '../components/react/add-to-cart';
+import { Image } from 'astro:assets';
 
 function formatCurrency(amount: number) {
     return new Intl.NumberFormat('en-US', {
@@ -28,7 +29,8 @@ const { count = Infinity, addToCart = true } = Astro.props;
 {
     shopItems.slice(0, count).map((item) => (
         <div class="item">
-            <img src={item.image.src} alt={item.image.alt} />
+            <Image src={item.image.src} alt={item.image.alt}    width="250"
+  height="250"/>
             <h2>{item.title}</h2>
             <p>{item.description}</p>
             <p class="price">{formatCurrency(item.price)}</p>
