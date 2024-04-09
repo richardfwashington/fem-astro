@@ -27,4 +27,7 @@ export default defineConfig({
 		maxDuration: 8,
 	}),
 	prefetch: true,
+	image: {
+		domains: ['unsplash.com'],
+	},
 });
