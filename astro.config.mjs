@@ -28,6 +28,6 @@ export default defineConfig({
 	}),
 	prefetch: true,
 	image: {
-		domains: ['unsplash.com'],
+		domains: ['images.unsplash.com'],
 	},
 });
